@@ -1,5 +1,3 @@
 Rails.application.routes.draw do
-  resources :users
-  match '/auth/:provider/callback', to: 'session#create', via: [:get, :post]
-  match '/logout', to: 'session#destroy', via: [:get, :post]
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
