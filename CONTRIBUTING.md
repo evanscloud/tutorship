@@ -34,8 +34,11 @@ Ideally, a bug report should include a pull request with failing specs.
 1. [Fork the repository.][fork]
 2. [Create a topic branch.][branch]
 3. Implement your feature or bug fix.
-4. Add, commit, and push your changes.
-5. [Submit a pull request.][pr]
+4. Mention how your changes affect the project to other developers and users in the [`CHANGELOG.md`][changelog] file.
+5. Add, commit, and push your changes.
+6. [Submit a pull request.][pr]
+
+[changelog]: ./CHANGELOG.md
 
 ## Notes
 * Please add tests if you changed code. Contributions without tests won't be accepted.
