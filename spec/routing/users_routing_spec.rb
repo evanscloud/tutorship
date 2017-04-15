@@ -9,11 +9,11 @@ RSpec.describe UsersController, type: :routing do
     end
 
     it 'routes to #show' do
-      expect(get: '/users/1').to route_to('users#show', id: '1')
+      expect(get: '/@a').to route_to('users#show', login: 'a')
     end
 
     it 'routes to #destroy' do
-      expect(delete: '/users/1').to route_to('users#destroy', id: '1')
+      expect(delete: '/@a').to route_to('users#destroy', login: 'a')
     end
   end
 end

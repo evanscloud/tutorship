@@ -5,7 +5,7 @@ FactoryGirl.define do
     name          { Faker::Name.name }
     email         { Faker::Internet.email }
     location      { Faker::Address.country }
-    login         { Faker::Internet.unique.user_name separators: ['-'] }
+    login         { Faker::Internet.unique.user_name(nil, ['-']) }
     github_id     { Faker::Number.unique.number(8) }
     avatar_url    { Faker::Avatar.image }
     github_url    { Faker::Internet.url }

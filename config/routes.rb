@@ -8,8 +8,8 @@ Rails.application.routes.draw do
 
     as :users do
       get '/users', to: 'users#index', as: 'users'
-      get '/users/:id', to: 'users#show', as: 'user'
-      delete '/users/:id', to: 'users#destroy'
+      get '/@:login', to: 'users#show', as: 'user'
+      delete '/@:login', to: 'users#destroy'
     end
 
     root 'users#index'

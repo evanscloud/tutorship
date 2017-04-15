@@ -26,4 +26,8 @@ class User < ApplicationRecord
       'avatar_url'    => payload['extra']['raw_info']['avatar_url']
     }
   end
+
+  def to_param
+    login
+  end
 end
