@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<img src="<%= @user.avatar_url %>" />
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Login:</strong>
+  <%= @user.login %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @user.location %>
+</p>
+
+<p>
+  <strong>GitHub URL:</strong>
+  <%= @user.github_url %>
+</p>
+
+<%= link_to 'Back', users_path %>

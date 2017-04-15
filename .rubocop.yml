@@ -1,0 +1,30 @@
+require: rubocop-rspec
+
+AllCops:
+  Exclude:
+    - 'node_modules/**/*'
+    - 'db/migrate/**/*'
+  TargetRubyVersion: 2.4
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
