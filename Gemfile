@@ -49,7 +49,9 @@ group :development, :test do
   gem 'selenium-webdriver'
   # Add RSpec
   gem 'rspec-rails', '~> 3.5'
-  gem 'factory_girl_rails', '~> 4.8.0'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'faker'
   gem 'rubocop-rspec'
 end
 

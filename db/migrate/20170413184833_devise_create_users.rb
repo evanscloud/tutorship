@@ -8,7 +8,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string :login, null: false
 
       # GitHub info
-      t.integer :github_id, null: false
+      t.integer :github_id, limit: 8, null: false
       t.string :avatar_url, null: false
       t.string :github_url, null: false
       t.string :github_token, null: false
