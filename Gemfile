@@ -30,8 +30,6 @@ gem 'webpacker'
 # Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 # Authentication
 gem 'devise', '~> 4.2.1'
@@ -51,6 +49,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'faker'
   gem 'rubocop-rspec'
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
@@ -63,6 +62,8 @@ group :development do
   # background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Use Capistrano for deployment
+  # gem 'capistrano-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
