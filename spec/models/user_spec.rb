@@ -131,4 +131,11 @@ RSpec.describe User, type: :model do
       expect(result[:avatar_url]).to eq(payload[:info][:image])
     end
   end
+
+  describe '#to_param' do
+    it 'returns `login` field as parameter' do
+      user = FactoryGirl.build(:user)
+      expect(user.to_param).to eq(user.login)
+    end
+  end
 end
