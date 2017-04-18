@@ -9,7 +9,7 @@ FactoryGirl.define do
     github_id     { Faker::Number.unique.number(8) }
     avatar_url    { Faker::Avatar.image }
     github_url    { "https://github.com/#{login}" }
-    github_token  { Faker::Number.hexadecimal(40) }
+    github_token  { Faker::Crypto.md5 }
     created_at    { Faker::Date.birthday(1, 10) }
     updated_at    { 1.hours.ago }
   end
