@@ -14,7 +14,7 @@ class User < ApplicationRecord
     attrs = extract_from(payload)
 
     # Let's see if we can find an existing user
-    user = User.find_by_github_id(attrs['github_id'])
+    user = User.find_by_github_id(attrs[:github_id])
 
     # Either we have a new user
     if user.nil?

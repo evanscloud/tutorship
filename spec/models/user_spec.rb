@@ -80,7 +80,6 @@ RSpec.describe User, type: :model do
     end
     it do
       is_expected.to validate_uniqueness_of(:github_id)
-        .case_insensitive
     end
 
     # Required fields
@@ -89,6 +88,20 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_presence_of(:github_token) }
     it { is_expected.to validate_presence_of(:github_url) }
     it { is_expected.to validate_presence_of(:avatar_url) }
+  end
+
+  describe '.find_or_create_by' do
+    it 'creates a new record if it doesn\'t exist' do
+      user = User.find_or_create_by(github_hash)
+      expect(user.persisted?).to eq(true)
+    end
+    it 'returns an existing record details if any' do
+      existing_user = FactoryGirl.create(:user)
+      payload = github_hash
+      payload[:uid] = existing_user.github_id
+      user = User.find_or_create_by(payload)
+      expect(existing_user).to eq(user)
+    end
   end
 
   describe '.extract_from' do
