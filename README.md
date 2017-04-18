@@ -2,6 +2,8 @@
 
 [![Join the chat at https://gitter.im/Tutorship/Lobby](https://badges.gitter.im/Tutorship/Lobby.svg)](https://gitter.im/Tutorship/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![codecov](https://codecov.io/gh/tutorship/tutorship/branch/master/graph/badge.svg)](https://codecov.io/gh/tutorship/tutorship)
+[![Build Status](https://travis-ci.org/tutorship/tutorship.svg?branch=master)](https://travis-ci.org/tutorship/tutorship)
 
 A Platform to make learning programming fun!
 
