@@ -7,7 +7,7 @@ rvm:
   - ruby-head
 
 addons:
-  postgresql: "9.5"
+  postgresql: "9.4"
 
 services:
   - postgresql
