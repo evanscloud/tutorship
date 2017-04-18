@@ -71,6 +71,18 @@ end
 
 RSpec.describe User, type: :model do
   context 'validations' do
+    subject { FactoryGirl.build(:user) }
+
+    # Uniqueness
+    it do
+      is_expected.to validate_uniqueness_of(:login)
+        .case_insensitive
+    end
+    it do
+      is_expected.to validate_uniqueness_of(:github_id)
+        .case_insensitive
+    end
+
     # Required fields
     it { is_expected.to validate_presence_of(:login) }
     it { is_expected.to validate_presence_of(:github_id) }
