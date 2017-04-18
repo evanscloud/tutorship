@@ -24,8 +24,8 @@ RSpec.describe UsersController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # User. As you add validations to User, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) do
-    skip('Add a hash of attributes valid for your model')
+  let(:user) do
+    FactoryGirl.create(:user)
   end
 
   let(:invalid_attributes) do
@@ -39,31 +39,26 @@ RSpec.describe UsersController, type: :controller do
 
   describe 'GET #index' do
     it 'assigns all users as @users' do
-      user = User.create! valid_attributes
       get :index, params: {}, session: valid_session
-      expect(assigns(:users)).to eq([user])
+      assert_response :success
     end
   end
 
   describe 'GET #show' do
     it 'assigns the requested user as @user' do
-      user = User.create! valid_attributes
-      get :show, params: { id: user.to_param }, session: valid_session
-      expect(assigns(:user)).to eq(user)
+      get :show, params: { login: user.to_param }, session: valid_session
+      assert_response :success
     end
   end
 
   describe 'DELETE #destroy' do
     it 'destroys the requested user' do
-      user = User.create! valid_attributes
-      expect do
-        delete :destroy, params: { id: user.to_param }, session: valid_session
-      end.to change(User, :count).by(-1)
+      delete :destroy, params: { login: user.to_param }, session: valid_session
+      expect(User.count).to eq(0)
     end
 
     it 'redirects to the users list' do
-      user = User.create! valid_attributes
-      delete :destroy, params: { id: user.to_param }, session: valid_session
+      delete :destroy, params: { login: user.to_param }, session: valid_session
       expect(response).to redirect_to(users_url)
     end
   end

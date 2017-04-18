@@ -24,9 +24,4 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find_by_login(params[:login])
   end
-
-  # Only allow a trusted parameter "white list" through.
-  def user_params
-    params.fetch(:user, {})
-  end
 end
