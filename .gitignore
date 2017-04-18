@@ -177,6 +177,7 @@ build-iPhoneSimulator/
 *.css.map
 
 ### VisualStudioCode ###
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
