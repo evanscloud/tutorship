@@ -4,9 +4,24 @@ require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
   describe 'GET /users' do
-    it 'works! (now write some real specs)' do
+    it 'to success' do
       get users_path
-      expect(response).to have_http_status(200)
+      assert_response :success
     end
   end
+  describe 'GET /@:login' do
+    it 'to success' do
+      user = FactoryGirl.create(:user)
+      get user_path login: user.login
+      assert_response :success
+    end
+  end
+  describe 'DELETE /@:login' do
+    it 'to success' do
+      user = FactoryGirl.create(:user)
+      delete user_path login: user.login
+      assert_response :redirect
+    end
+  end
+
 end
