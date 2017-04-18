@@ -30,7 +30,6 @@ gem 'webpacker'
 # Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
-
 # Authentication
 gem 'devise', '~> 4.2.1'
 gem 'omniauth', '~> 1.6.1'
