@@ -12,9 +12,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_170_413_184_833) do
+ActiveRecord::Schema.define(version: 20_170_419_085_956) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
+
+  create_table 'courses', force: :cascade do |t|
+    t.string 'title', null: false
+    t.text 'description'
+    t.bigint 'repo_id', null: false
+    t.string 'repo_slug', null: false
+    t.string 'repo_url', null: false
+    t.bigint 'user_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['user_id'], name: 'index_courses_on_user_id'
+  end
 
   create_table 'users', force: :cascade do |t|
     t.string 'name'
@@ -30,4 +42,6 @@ ActiveRecord::Schema.define(version: 20_170_413_184_833) do
     t.index ['github_id'], name: 'index_users_on_github_id', unique: true
     t.index ['login'], name: 'index_users_on_login', unique: true
   end
+
+  add_foreign_key 'courses', 'users'
 end
