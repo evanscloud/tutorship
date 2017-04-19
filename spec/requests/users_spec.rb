@@ -23,5 +23,4 @@ RSpec.describe 'Users', type: :request do
       assert_response :redirect
     end
   end
-
 end
