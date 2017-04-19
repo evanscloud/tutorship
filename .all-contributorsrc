@@ -19,6 +19,16 @@
         "doc",
         "infra"
       ]
+    },
+    {
+      "login": "abobkerElmaki",
+      "name": "Abobker Elmaki",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/27720566?v=3",
+      "profile": "https://github.com/abobkerElmaki",
+      "contributions": [
+        "design",
+        "review"
+      ]
     }
   ]
 }
