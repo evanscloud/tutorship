@@ -13,6 +13,9 @@ A Platform to make learning programming fun!
 
 You can read the original article about this project [here](https://medium.com/@ahmedtaj/git-powered-interactive-programming-tutorials-3e6fbfec503c).
 
+## Contributing
+
+We are definitely interested in feedback and ideas on things for this project. To find how you can help check our contributing [guides](./CONTRIBUTING.md).
 
 ## Contributors
 
