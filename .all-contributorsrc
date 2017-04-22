@@ -4,8 +4,8 @@
   "files": [
     "README.md"
   ],
-  "imageSize": 80,
-  "commit": true,
+  "imageSize": 100,
+  "commit": false,
   "contributors": [
     {
       "login": "ahmed-taj",
@@ -28,6 +28,15 @@
       "contributions": [
         "design",
         "review"
+      ]
+    },
+    {
+      "login": "efueger",
+      "name": "efueger",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2053833?v=3",
+      "profile": "https://github.com/efueger",
+      "contributions": [
+        "infra"
       ]
     }
   ]
