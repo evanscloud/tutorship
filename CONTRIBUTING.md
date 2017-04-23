@@ -58,7 +58,7 @@ This project follows the all contributors specification. To add yourself to the
 table of contributors on the README.md, please use the automated script as part
 of your PR:
 
-        $ yarn run contrib-add <YOUR_GITHUB_USERNAME>
+        $ yarn run add-contrib <YOUR_GITHUB_USERNAME>
 
 Follow the prompt. If you've already added yourself to the list and are making
 a new type of contribution, you can run it again and select the added
