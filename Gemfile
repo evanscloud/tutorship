@@ -43,7 +43,10 @@ group :development, :test do
   # Add RSpec
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_girl_rails'
-  gem 'faker'
+  # We are pulling from Github only because we need PR #888
+  # See: https://github.com/stympy/faker/pull/888
+  # TODO: change this when a new version of faker released
+  gem 'faker', github: ('stympy/faker')
 end
 
 group :development do

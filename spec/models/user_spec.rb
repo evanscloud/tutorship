@@ -27,13 +27,16 @@ RSpec.describe User, type: :model do
   end
 
   describe '.find_or_create_by' do
+    let(:payload) do
+      Faker::Omniauth.github
+    end
+
     it 'creates a new record if it doesn\'t exist' do
-      user = User.find_or_create_by(fake_github)
+      user = User.find_or_create_by(payload)
       expect(user.persisted?).to eq(true)
     end
     it 'returns an existing record details if any' do
       existing_user = create(:user)
-      payload = fake_github
       payload[:uid] = existing_user.github_id
       user = User.find_or_create_by(payload)
       expect(existing_user).to eq(user)
@@ -42,10 +45,7 @@ RSpec.describe User, type: :model do
 
   describe '.extract_from' do
     let(:payload) do
-      # TODO: replace fake_github call with:
-      #   Faker::Omniauth.github
-      # Refer to fake_github function above for more info
-      fake_github
+      Faker::Omniauth.github
     end
 
     let(:result) do
