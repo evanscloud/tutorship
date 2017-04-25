@@ -54,6 +54,7 @@ RSpec.describe UsersController, type: :controller do
   describe 'DELETE #destroy' do
     it 'destroys the requested user' do
       delete :destroy, params: { login: user.to_param }, session: valid_session
+      assert_response :redirect
       expect(User.count).to eq(0)
     end
 

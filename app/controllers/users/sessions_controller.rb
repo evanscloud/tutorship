@@ -7,6 +7,8 @@ module Users
       sign_in_and_redirect @user
     end
 
+    private
+
     def payload
       request.env['omniauth.auth']
     end

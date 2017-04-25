@@ -46,7 +46,7 @@ group :development, :test do
   # We are pulling from Github only because we need PR #888
   # See: https://github.com/stympy/faker/pull/888
   # TODO: change this when a new version of faker released
-  gem 'faker', github: ('stympy/faker')
+  gem 'faker', github: 'stympy/faker'
 end
 
 group :development do
