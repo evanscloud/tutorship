@@ -9,9 +9,16 @@
 [![Join the chat at https://gitter.im/Tutorship/Lobby](https://badges.gitter.im/Tutorship/Lobby.svg)](https://gitter.im/Tutorship/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
-A Platform to make learning programming fun!
+A Git(Hub) powered platform for publishing interactive programming courses.
 
-You can read the original article about this project [here](https://medium.com/@ahmedtaj/git-powered-interactive-programming-tutorials-3e6fbfec503c).
+
+## How it works
+
+TODO
+
+## Why
+
+TODO
 
 ## Contributing
 
