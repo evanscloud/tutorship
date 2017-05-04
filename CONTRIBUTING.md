@@ -58,6 +58,12 @@ $ yarn
 $ rspec
 ```
 
+### Linting
+
+```
+$ rubocop -a
+```
+
 ### Start development server
 
 ```
