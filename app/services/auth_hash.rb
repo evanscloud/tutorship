@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AuthHash
   def initialize(auth_hash)
     @auth_hash = auth_hash

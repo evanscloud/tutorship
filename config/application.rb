@@ -38,6 +38,5 @@ module Tutorship
     # config.eager_load_paths += [
     #   'lib'
     # ].map { |path| Rails.root.join(path).to_s }
-
   end
 end

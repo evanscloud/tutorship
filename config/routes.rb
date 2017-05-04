@@ -6,10 +6,11 @@ Rails.application.routes.draw do
       omniauth_callbacks: 'users/sessions'
     }
 
-    as :users do
-      get '/users', to: 'users#index', as: 'users'
-      get '/@:login', to: 'users#show', as: 'user'
-      delete '/@:login', to: 'users#destroy'
+    devise_scope :user do
+      get 'users', to: 'users#index', as: 'users'
+      get '@:login', to: 'users#show', as: 'user'
+      delete '@:login', to: 'users#destroy'
+      get 'logout', to: 'devise/sessions#destroy', as: :destroy_user_session
     end
 
     root 'users#index'
