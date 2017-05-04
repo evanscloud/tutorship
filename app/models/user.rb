@@ -12,7 +12,7 @@ class User < ApplicationRecord
   validates :github_url, presence: true
 
   def self.find_or_create_by(payload)
-    attrs = extract_from(payload)
+    attrs = AuthHash.new(payload).user_info
 
     # Let's see if we can find an existing user
     user = User.find_by_github_id(attrs[:github_id])
@@ -23,24 +23,11 @@ class User < ApplicationRecord
 
     # Or we should update our existing user's attributes
     else
+      # TODO: Don't update if access token has lower scopes
       user.update_attributes(attrs)
     end
 
     user
-  end
-
-  # rubocop:disable Metrics/AbcSize
-  def self.extract_from(payload)
-    {
-      name:         payload[:info][:name],
-      email:        payload[:info][:email],
-      login:        payload[:info][:nickname],
-      avatar_url:   payload[:info][:image],
-      github_id:    payload[:uid].to_i,
-      github_token: payload[:credentials][:token],
-      github_url:   payload[:extra][:raw_info][:html_url],
-      location:     payload[:extra][:raw_info][:location]
-    }
   end
 
   def to_param

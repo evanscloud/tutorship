@@ -33,5 +33,11 @@ module Tutorship
       g.view_specs false
       g.helper_specs false
     end
+
+    # Append directories to autoload paths
+    # config.eager_load_paths += [
+    #   'lib'
+    # ].map { |path| Rails.root.join(path).to_s }
+
   end
 end
