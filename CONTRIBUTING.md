@@ -14,7 +14,7 @@ Here are some ways *you* can contribute:
 * by writing specifications
 * by writing code ( **no patch is too small** : fix typos, add comments, clean up inconsistent whitespace )
 * by refactoring code
-* by closing [issues][]
+* by closing [issues][issues]
 * by reviewing patches
 
 [issues]: https://github.com/tutorship/tutorship/issues
@@ -29,6 +29,40 @@ You are going to need the following dependencies installed:
 - [Node](https://nodejs.org) JS (v6.x)
 - [Yarn](https://yarnpkg.com/) package manager
 - [Git](https://git-scm.com)
+
+
+### Installing dependencies
+
+To install Ruby gems run:
+
+```
+$ bundler
+```
+
+Then install npm packages using:
+
+```
+$ yarn
+```
+
+### Required environment variables
+
+| ENV variable            | Description                           |
+| :---------------------- | :------------------------------------ |
+| GITHUB_CLIENT_ID        | the GitHub Application Client ID      |
+| GITHUB_CLIENT_SECRET    | the GitHub Application Client Secret  |
+
+### Running tests
+
+```
+$ rspec
+```
+
+### Start development server
+
+```
+$ rails s
+```
 
 
 ## Submitting an Issue
@@ -58,7 +92,9 @@ This project follows the all contributors specification. To add yourself to the
 table of contributors on the README.md, please use the automated script as part
 of your PR:
 
-        $ yarn run add-contrib <YOUR_GITHUB_USERNAME>
+```
+$ yarn run add-contrib <YOUR_GITHUB_USERNAME>
+```
 
 Follow the prompt. If you've already added yourself to the list and are making
 a new type of contribution, you can run it again and select the added
