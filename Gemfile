@@ -16,6 +16,9 @@ gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', github: 'rails/sass-rails'
 
+# Semantic UI assets
+gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript.
