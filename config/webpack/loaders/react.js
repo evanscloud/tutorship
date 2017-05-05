@@ -5,6 +5,7 @@ module.exports = {
   options: {
     presets: [
       'react',
+      "stage-3"
       ['env', { modules: false }]
     ]
   }
