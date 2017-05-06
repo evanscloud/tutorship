@@ -18,6 +18,7 @@ gem 'sass-rails', github: 'rails/sass-rails'
 
 # Semantic UI assets
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+gem 'autoprefixer-rails', '~> 6.7.7'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
