@@ -6,11 +6,13 @@ Rails.application.routes.draw do
       omniauth_callbacks: 'users/sessions'
     }
 
+    get '/login', to: redirect('/auth/github'), as: 'login'
+
     devise_scope :user do
       get 'users', to: 'users#index', as: 'users'
-      get '@:login', to: 'users#show', as: 'user'
+      get '@:login', to: 'users#show', as: 'profile'
       delete '@:login', to: 'users#destroy'
-      get 'logout', to: 'devise/sessions#destroy', as: :destroy_user_session
+      get 'logout', to: 'users/sessions#logout', as: 'logout'
     end
 
     root 'users#index'
