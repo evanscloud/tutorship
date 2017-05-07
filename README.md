@@ -41,7 +41,7 @@ Above all, you can get help from the awesome open source contributors around the
 
 Again, just like any GitHub repository, you can version your course, and tell the followers what changed.
 
-Students can also decide to take the course again, if there is a major change.
+Students can also decide to take the course again if there is a major change.
 
 Fixed a bug? no need to worry, all those who are currently enrolled in that course will receive your fix auto-magically :)
 
@@ -51,7 +51,7 @@ Online interactive platforms require very good network which isn't available alw
 
 #### 7. Dependencies management
 
-Tutorship utilizes [Docker][docker] for managing course dependencies, and knows how to configure and install a course, you don't need to install anything but Docker, and Tutorship CLI, and Tutorship will take the care of the rest.
+Tutorship utilizes [Docker][docker] for managing course dependencies and knows how to configure and install a course, you don't need to install anything but Docker, and Tutorship CLI and Tutorship will take the care of the rest.
 
 [docker]: https://docker.com
 
@@ -59,7 +59,7 @@ Tutorship utilizes [Docker][docker] for managing course dependencies, and knows 
 
 Do you miss your lovely text editor, code linting, snippets, your editor's key-mapping ...etc when using online code platform? Not anymore!
 
-Tutorship seamlessly integrate with the tools your already uses and love, prefer Atom, Visual Studio Code? no problem, you name it.
+Tutorship seamlessly integrate with the tools you already uses and love, prefer Atom, Visual Studio Code? no problem, you name it.
 
 ## You are welcome to help
 
