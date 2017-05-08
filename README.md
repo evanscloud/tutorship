@@ -1,4 +1,3 @@
-# Tutorship
 
 [![Build Status](https://travis-ci.org/tutorship/tutorship.svg?branch=master)](https://travis-ci.org/tutorship/tutorship)
 [![Code Climate](https://codeclimate.com/github/tutorship/tutorship/badges/gpa.svg)](https://codeclimate.com/github/tutorship/tutorship)
@@ -8,6 +7,8 @@
 
 [![Join the chat at https://gitter.im/Tutorship/Lobby](https://badges.gitter.im/Tutorship/Lobby.svg)](https://gitter.im/Tutorship/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
+
+# Tutorship
 
 A Git(Hub) powered platform for publishing interactive programming courses.
 

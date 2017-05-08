@@ -18,7 +18,7 @@ gem 'sass-rails', github: 'rails/sass-rails'
 
 # Semantic UI assets
 gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
-gem 'autoprefixer-rails', '~> 6.7.7'
+gem 'autoprefixer-rails', '~> 7.0.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -42,7 +42,7 @@ group :development, :test do
   # console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13.0'
+  gem 'capybara', '~> 2.14.0'
   gem 'selenium-webdriver', '~> 3.4.0'
   # Add RSpec
   gem 'rspec-rails', '~> 3.5'
@@ -72,7 +72,7 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'database_cleaner'
   gem 'simplecov', '~> 0.14.1', require: false
-  gem 'codeclimate-test-reporter', '~> 1.0.0', require: false
+  gem 'codeclimate-test-reporter', '~> 1.0.7', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
