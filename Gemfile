@@ -17,7 +17,7 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', github: 'rails/sass-rails'
 
 # Semantic UI assets
-gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
 gem 'autoprefixer-rails', '~> 7.0.1'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -50,7 +50,7 @@ group :development, :test do
   # We are pulling from Github only because we need PR #888
   # See: https://github.com/stympy/faker/pull/888
   # TODO: change this when a new version of faker released
-  gem 'faker', github: 'stympy/faker'
+  gem 'faker', github: 'stympy/faker', ref: 'a949848f'
 end
 
 group :development do
