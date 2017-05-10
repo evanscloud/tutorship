@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <td>
+      <%= link_to root_path do %>
+        Home
+      <% end %>
+    </td>
+
+    <% if user_signed_in? %>
+    <td>
+      Welcome,
+      <%= link_to profile_path(current_user) do %>
+        <%= current_user.name %>
+      <% end %>
+    </td>
+
+    <td>
+      <%= link_to logout_path do %>
+        Sign out
+      <% end %>
+    </td>
+    <% else %>
+    <td>
+      <%= link_to login_path, data: { turbolinks: false } do %>
+        Sign in
+      <% end %>
+    </td>
+    <% end %>
+  </tr>
+</table>
+
+<br>
