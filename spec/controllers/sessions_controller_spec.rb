@@ -20,7 +20,7 @@ require 'rails_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
-RSpec.describe Users::SessionsController, type: :controller do
+RSpec.describe SessionsController, type: :controller do
   describe '#github' do
     before do
       request.env['devise.mapping'] = Devise.mappings[:user]
