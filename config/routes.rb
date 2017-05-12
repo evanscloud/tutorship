@@ -2,10 +2,13 @@
 
 Rails.application.routes.draw do
   scope format: false do
+
+    # Github login
     devise_for :users, path: '/', controllers: {
       omniauth_callbacks: 'sessions'
     }
 
+    # Sign in, Sign up & Profile
     devise_scope :user do
       get 'users', to: 'users#index', as: 'users'
       get '@:login', to: 'users#show', as: 'profile'
@@ -15,6 +18,7 @@ Rails.application.routes.draw do
       get 'logout', to: 'sessions#logout', as: 'logout'
     end
 
-    root 'users#index'
+    # Pages
+    root 'pages#index'
   end
 end
