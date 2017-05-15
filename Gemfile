@@ -8,9 +8,9 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.0.rc2'
+gem 'rails', '~> 5.1'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
+gem 'pg', '~> 0.20'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -18,13 +18,11 @@ gem 'sass-rails', github: 'rails/sass-rails'
 
 # Semantic UI assets
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
-gem 'autoprefixer-rails', '~> 7.0.1'
+gem 'autoprefixer-rails', '~> 7.1'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Transpile app-like JavaScript.
-# Read more: https://github.com/rails/webpacker
-gem 'webpacker'
+gem 'uglifier', '>= 1.3'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -33,17 +31,20 @@ gem 'webpacker'
 gem 'turbolinks', '~> 5'
 
 # Authentication
-gem 'devise', '~> 4.2.1'
-gem 'omniauth', '~> 1.6.1'
-gem 'omniauth-github', '~> 1.2.3'
+gem 'devise', '~> 4.3'
+gem 'omniauth', '~> 1.6'
+gem 'omniauth-github', '~> 1.2'
+
+# GitHub API
+gem 'octokit', '~> 4.7'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger
   # console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.14.0'
-  gem 'selenium-webdriver', '~> 3.4.0'
+  gem 'capybara', '~> 2.14'
+  gem 'selenium-webdriver', '~> 3.4'
   # Add RSpec
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_girl_rails'
@@ -63,7 +64,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the
   # background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen', '~> 2.0'
   # Use Capistrano for deployment
   # gem 'capistrano-rails'
 end
