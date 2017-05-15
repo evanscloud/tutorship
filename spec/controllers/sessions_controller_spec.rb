@@ -21,23 +21,32 @@ require 'rails_helper'
 # that an instance is receiving a specific message.
 
 RSpec.describe SessionsController, type: :controller do
+  let(:user) { create(:user) }
+
   describe '#github' do
     before do
       request.env['devise.mapping'] = Devise.mappings[:user]
       request.env['omniauth.auth'] = OmniAuth.config.mock_auth[:github]
-    end
-
-    it 'Creates a new user' do
-      get :github
-      assert_response :redirect
-      expect(User.count).to eq(1)
+      allow(User).to receive(:find_or_create_by).and_return(user)
     end
 
     it 'Signs in the user' do
-      User.find_or_create_by(request.env['omniauth.auth'])
       get :github
+      expect(controller.user_signed_in?).to eq(true)
+    end
+  end
+  describe '#logout' do
+    before do
+      request.env['devise.mapping'] = Devise.mappings[:user]
+      sign_in(user)
+    end
+    it 'Signs out the user' do
+      get :logout
+      expect(controller.user_signed_in?).to eq(false)
+    end
+    it 'Redirects to root path' do
+      get :logout
       assert_response :redirect
-      expect(User.count).to eq(1)
     end
   end
 end
