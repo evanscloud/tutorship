@@ -2,7 +2,6 @@
 
 Rails.application.routes.draw do
   scope format: false do
-
     # Github login
     devise_for :users, path: '/', controllers: {
       omniauth_callbacks: 'sessions'

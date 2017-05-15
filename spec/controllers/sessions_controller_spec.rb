@@ -24,7 +24,7 @@ RSpec.describe SessionsController, type: :controller do
   describe '#github' do
     before do
       request.env['devise.mapping'] = Devise.mappings[:user]
-      request.env['omniauth.auth'] = Faker::Omniauth.github
+      request.env['omniauth.auth'] = OmniAuth.config.mock_auth[:github]
     end
 
     it 'Creates a new user' do
