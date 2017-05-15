@@ -28,7 +28,7 @@ RSpec.describe User, type: :model do
 
   describe '.find_or_create_by' do
     let(:payload) do
-      Faker::Omniauth.github
+      OmniAuth.config.mock_auth[:github]
     end
 
     it 'creates a new record if it doesn\'t exist' do
