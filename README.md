@@ -1,7 +1,6 @@
 
 [![Build Status](https://travis-ci.org/tutorship/tutorship.svg?branch=master)](https://travis-ci.org/tutorship/tutorship)
 [![Code Climate](https://codeclimate.com/github/tutorship/tutorship/badges/gpa.svg)](https://codeclimate.com/github/tutorship/tutorship)
-[![Issue Count](https://codeclimate.com/github/tutorship/tutorship/badges/issue_count.svg)](https://codeclimate.com/github/tutorship/tutorship)
 [![Test Coverage](https://codeclimate.com/github/tutorship/tutorship/badges/coverage.svg)](https://codeclimate.com/github/tutorship/tutorship/coverage)
 [![Dependency Status](https://gemnasium.com/badges/github.com/tutorship/tutorship.svg)](https://gemnasium.com/github.com/tutorship/tutorship)
 

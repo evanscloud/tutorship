@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 source 'https://rubygems.org'
+ruby '2.4.1'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
@@ -39,9 +40,6 @@ gem 'omniauth-github', '~> 1.2'
 gem 'octokit', '~> 4.7'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger
-  # console
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.14'
   gem 'selenium-webdriver', '~> 3.4'
@@ -51,7 +49,7 @@ group :development, :test do
   # We are pulling from Github only because we need PR #888
   # See: https://github.com/stympy/faker/pull/888
   # TODO: change this when a new version of faker released
-  gem 'faker', github: 'stympy/faker', ref: 'a949848f'
+  gem 'faker', '~> 1.7.3'
 end
 
 group :development do
@@ -75,6 +73,3 @@ group :test do
   gem 'simplecov', '~> 0.14.1', require: false
   gem 'codeclimate-test-reporter', '~> 1.0.7', require: false
 end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
