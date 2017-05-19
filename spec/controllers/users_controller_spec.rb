@@ -38,28 +38,28 @@ RSpec.describe UsersController, type: :controller do
   let(:valid_session) { {} }
 
   describe 'GET #index' do
-    it 'assigns all users as @users' do
-      get :index, params: {}, session: valid_session
+    it 'returns the list of all users' do
+      get :index, params: {}
       assert_response :success
     end
   end
 
   describe 'GET #show' do
-    it 'assigns the requested user as @user' do
-      get :show, params: { login: user.to_param }, session: valid_session
+    it 'returns specific user details' do
+      get :show, params: { login: user.to_param }
       assert_response :success
     end
   end
 
   describe 'DELETE #destroy' do
-    it 'destroys the requested user' do
-      delete :destroy, params: { login: user.to_param }, session: valid_session
-      assert_response :redirect
-      expect(User.count).to eq(0)
+    it 'destroys the user' do
+      expect do
+        delete :destroy, params: { login: user.to_param }
+      end.not_to change(User, :count)
     end
 
     it 'redirects to the users list' do
-      delete :destroy, params: { login: user.to_param }, session: valid_session
+      delete :destroy, params: { login: user.to_param }
       expect(response).to redirect_to(users_url)
     end
   end
