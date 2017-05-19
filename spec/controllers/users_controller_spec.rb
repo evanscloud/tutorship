@@ -60,7 +60,7 @@ RSpec.describe UsersController, type: :controller do
 
     it 'redirects to the users list' do
       delete :destroy, params: { login: user.to_param }
-      expect(response).to redirect_to(users_url)
+      expect(response).to redirect_to(root_url)
     end
   end
 end
