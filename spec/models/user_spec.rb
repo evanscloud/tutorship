@@ -3,9 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  context 'validations' do
-    subject { build(:user) }
+  subject(:user) { build(:user) }
 
+  context 'validations' do
     # Uniqueness
     it do
       is_expected.to validate_uniqueness_of(:login)
@@ -43,9 +43,14 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe '#token' do
+    it 'returns `github_token` field' do
+      expect(user.token).to eq(user.github_token)
+    end
+  end
+
   describe '#to_param' do
-    it 'returns `login` field as parameter' do
-      user = build(:user)
+    it 'returns `login` field' do
       expect(user.to_param).to eq(user.login)
     end
   end

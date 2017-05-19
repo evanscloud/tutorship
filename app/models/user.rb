@@ -30,6 +30,10 @@ class User < ApplicationRecord
     user
   end
 
+  def token
+    github_token
+  end
+
   def to_param
     # We use `login` as an identifier in `user#show` and `user#destroy` routes
     login
